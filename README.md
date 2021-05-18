@@ -11,6 +11,10 @@ For ios:
 For android:
   npx react-native run-android
 
+## Inspired by.
+
+  ![Alt text](https://github.com/mohdaamir8182/insta-ui-clone/blob/master/screenshots/mockup.jpeg)
+
 
 ## Screenshots from iphone 12 are added below.
 
