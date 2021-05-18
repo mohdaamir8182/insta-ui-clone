@@ -14,7 +14,7 @@ For android:
 
 ## Screenshots from iphone 12 are added below.
 
-<img src="https://github.com/mohdaamir8182/insta-ui-clone/blob/master/screenshots/iphon1.png" width="200">
+<img src="https://github.com/mohdaamir8182/insta-ui-clone/blob/master/screenshots/iphon1.png" width="400">
 
    ![Alt text](https://github.com/mohdaamir8182/insta-ui-clone/blob/master/screenshots/iphon1.png)   ![Alt text](https://github.com/mohdaamir8182/insta-ui-clone/blob/master/screenshots/iphon2.png)
    ![Alt text](https://github.com/mohdaamir8182/insta-ui-clone/blob/master/screenshots/iphon3.png)   ![Alt text](https://github.com/mohdaamir8182/insta-ui-clone/blob/master/screenshots/iphon4.png)
