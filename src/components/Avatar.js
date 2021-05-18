@@ -10,7 +10,7 @@ const Avatar = (props) => {
         <View>
             <Image 
                 source={image}
-                style={{height: scale(size), width: scale(size), borderRadius: scale(size)}}
+                style={{height: scale(size), width: scale(size), borderRadius: scale(size)/2}}
                 resizeMode="contain"
             />
         </View>

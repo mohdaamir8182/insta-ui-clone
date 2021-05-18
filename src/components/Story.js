@@ -11,9 +11,9 @@ const Story = (props) => {
     return (
         <View style={styles.container}>
             <Image
-                style={{width: scale(size), height: scale(size), borderRadius:scale(size) , borderColor: 'red', borderWidth: 2}} 
+                style={{width: scale(size), height: scale(size), borderRadius:scale(size)/2 , overflow: 'hidden' , borderColor: 'red', borderWidth: 2}} 
                 source={image}
-                resizeMode="contain"
+                resizeMode="cover"
             />
             <View style={styles.titleContainer}>
                 <Text style={styles.titleStyle}>{title}</Text>
