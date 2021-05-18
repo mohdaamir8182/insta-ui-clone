@@ -73,6 +73,6 @@ const styles = ScaledSheet.create({
   storyListContainer: {
     marginTop: '25@vs',
     marginBottom: '20@vs',
-    marginHorizontal: '10@s'
+    marginLeft: '10@s'
   },
 });
