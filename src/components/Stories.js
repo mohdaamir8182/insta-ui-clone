@@ -10,10 +10,10 @@ const Stories = () => {
             {
                 storiesList.map(single_story => {
                     return(
-                        <View key={single_story.id} style={{marginHorizontal: scale(10)}}>
+                        <View key={single_story.id} style={{marginHorizontal: scale(7)}}>
                             <Story 
                                 image={single_story.avatar}
-                                size={50}
+                                size={65}
                                 title={single_story.title}
                             />
                         </View>

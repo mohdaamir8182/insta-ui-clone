@@ -10,13 +10,13 @@ const Bio = (props) => {
     const {name ,verified , work , location} = props;
 
     return (
-        <View style={styles.container}>
+        <View>
             <View style={styles.nameContainer}>
                 <Text style={styles.name}>{name}</Text>
                 {
                     verified && 
-                    <View style={{marginLeft: scale(10)}}>
-                        <Avatar image={require('../assets/verified.png')} size={16} />    
+                    <View style={{marginLeft: scale(7)}}>
+                        <Avatar image={require('../assets/verified.png')} size={14} />    
                     </View>
                 }
             </View>
@@ -33,19 +33,17 @@ const Bio = (props) => {
 export default Bio
 
 const styles = ScaledSheet.create({
-    container:{
-
-    },
     nameContainer:{
         flexDirection: 'row'
     },
     locationContainer:{
         flexDirection: 'row',
-        marginTop: '5@vs'
+        marginTop: '3@vs',
     },
     infoText:{
         color: colors.inactive_icon,
-        fontSize: '12@ms'
+        fontSize: '12@ms',
+        lineHeight: 15
     },
     name:{
         fontWeight: 'bold'  

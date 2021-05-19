@@ -38,8 +38,8 @@ const styles = ScaledSheet.create({
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'space-between',
-        marginHorizontal: '30@s',
-        marginTop: '5@vs',
+        marginHorizontal: '15@s',
+        marginTop: '2@vs',
     },
     infoContainer: {
         flexDirection: 'row',
@@ -51,6 +51,7 @@ const styles = ScaledSheet.create({
     },
     nameTextStyle:{
         fontSize: '12@ms',
-        marginLeft: '10@s'
+        marginLeft: '7@s',
+        fontWeight: 'bold'
     }
 })

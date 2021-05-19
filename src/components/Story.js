@@ -30,11 +30,11 @@ const styles = ScaledSheet.create({
         justifyContent: 'center'
     },
     titleContainer:{
-        marginTop: '5@vs'
+        marginTop: '2@vs'
     },
     titleStyle:{
         textAlign: 'center',
         fontSize: '12@ms',
-        color: colors.inactive_icon 
+        color: colors.black 
     }
 })

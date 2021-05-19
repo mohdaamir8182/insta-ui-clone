@@ -1,6 +1,7 @@
 import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
 import { colors } from './src/styles/colors';
 import Home from './src/screens/tabs/Home';
 import Search from './src/screens/tabs/Search';
@@ -8,20 +9,25 @@ import Camera from './src/screens/tabs/Camera';
 import Feed from './src/screens/tabs/Feed';
 import Profile from './src/screens/tabs/Profile';
 import TabIcon from './src/components/Icon';
-
+import Icon from './src/components/Icon';
+import GalleryTab from './src/screens/toptabs/GalleryTab';
+import { verticalScale, scale } from 'react-native-size-matters';
 
 
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
+const TopTab = createMaterialTopTabNavigator();
 
-const MainStackNavigator = () => {
+export const MainStackNavigator = () => {
     return (
       <Stack.Navigator headerMode="none" initialRouteName="tabs">
         <Stack.Screen name="tabs" component={BottomTabs} />
       </Stack.Navigator>
     );
   };
+
+  const size = 19;
 
   const BottomTabs = () => {
     return (
@@ -44,7 +50,7 @@ const MainStackNavigator = () => {
           options={{
             unmountOnBlur: true,
             title: 'Home',
-            tabBarIcon: ({focused, color, size}) => {
+            tabBarIcon: ({focused, color}) => {
               return (
                 <TabIcon
                   image={require("./src/assets/home.png")}
@@ -63,7 +69,7 @@ const MainStackNavigator = () => {
           options={{
             unmountOnBlur: true,
             title: 'Search',
-            tabBarIcon: ({focused, color, size}) => {
+            tabBarIcon: ({focused, color}) => {
               return (
                 <TabIcon
                   image={require("./src/assets/search.png")}
@@ -82,7 +88,7 @@ const MainStackNavigator = () => {
           options={{
             unmountOnBlur: true,
             title: 'Camera',
-            tabBarIcon: ({focused, color, size}) => {
+            tabBarIcon: ({focused, color, size=25}) => {
               return (
                 <TabIcon
                   image={require("./src/assets/camera.png")}
@@ -101,7 +107,7 @@ const MainStackNavigator = () => {
           options={{
             unmountOnBlur: true,
             title: 'Feed',
-            tabBarIcon: ({focused, color, size}) => {
+            tabBarIcon: ({focused, color}) => {
               return (
                 <TabIcon
                   image={require("./src/assets/heart.png")}
@@ -120,10 +126,10 @@ const MainStackNavigator = () => {
           options={{
             unmountOnBlur: true,
             title: 'Profile',
-            tabBarIcon: ({focused, color, size}) => {
+            tabBarIcon: ({focused, color}) => {
               return (
                 <TabIcon
-                  image={require("./src/assets/user.png")}
+                  image={require("./src/assets/user2.png")}
                   focused={focused}
                   color={color}
                   size={size}
@@ -137,5 +143,79 @@ const MainStackNavigator = () => {
     );
   };
 
-  export default MainStackNavigator;
+export const TopTabs = () => {
+    return (
+      <TopTab.Navigator
+        initialRouteName="Feed"
+        tabBarOptions={{
+          showIcon: true,
+          showLabel: false,
+          activeTintColor: colors.button,
+          inactiveTintColor: colors.black,
+          style: {
+            backgroundColor: colors.white,
+            paddingVertical: verticalScale(15)
+          },
+          indicatorStyle: {
+            borderBottomColor: colors.black,
+            borderBottomWidth: 1,
+          },
+        }}>
+        <TopTab.Screen
+          name="Gallery"
+          component={GalleryTab}
+          options={{
+            tabBarIcon: ({color}) => (
+              <Icon 
+                image={require('./src/assets/dots-menu.png')}
+                size={scale(18)}
+                color={color}
+              />
+            ),
+          }}  
+        />
+        <TopTab.Screen
+          name="SecondPage"
+          component={Profile}
+          options={{
+            tabBarLabel: 'second',
+            tabBarIcon: ({ color }) => (
+              <Icon 
+                image={require('./src/assets/list.png')}
+                size={scale(18)}
+                color={color}
+              />
+            ),
+          }} />
+          <TopTab.Screen
+          name="Third"
+          component={Profile}
+          options={{
+            tabBarLabel: 'Third',
+            tabBarIcon: ({ color }) => (
+              <Icon 
+                image={require('./src/assets/favorite.png')}
+                size={scale(18)}
+                color={color}
+              />
+            ),
+          }} />
+          <TopTab.Screen
+          name="Fourth"
+          component={Profile}
+          options={{
+            tabBarLabel: 'Fourth',
+            tabBarIcon: ({ color }) => (
+              <Icon 
+                image={require('./src/assets/user2.png')}
+                size={scale(18)}
+                color={color}
+              />
+            ),
+          }} />
+      </TopTab.Navigator>
+    );
+  }
+
+
   

@@ -12,19 +12,23 @@ const ButtonText = ({title}) => {
     );
 }
 
-export default ButtonText
+export default ButtonText;
 
 const styles = ScaledSheet.create({
     container:{
-        borderRadius: '20@s',
+        width: '100%',
+        borderRadius: '3@s',
+        borderWidth: 1,
+        borderColor: colors.border_color,
         paddingHorizontal: '35@s',
-        paddingVertical: '3@vs',
-        backgroundColor: colors.button,
+        paddingVertical: '8@vs',
+        backgroundColor: colors.white,
         alignItems: 'center',
         justifyContent: 'center'
     },
     btnText:{
         fontSize: '12@ms',
-        color: colors.white
+        color: colors.black,
+        fontWeight: 'bold'
     }
 })

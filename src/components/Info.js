@@ -17,12 +17,14 @@ export default Info;
 
 const styles = ScaledSheet.create({
     titleText:{
-        color: colors.inactive_icon,
+        color: colors.black,
         marginTop: '3@vs',
-        textAlign: 'center'
+        textAlign: 'center',
+        lineHeight: 15
     },
     valueText:{
         textAlign: 'center',
+        fontSize: 17,
         fontWeight: 'bold',
         color: colors.active_icon
     }

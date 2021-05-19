@@ -51,11 +51,12 @@ export default Home;
 const styles = ScaledSheet.create({
   container: {
     flex: 1,
+    backgroundColor: colors.white
   },
   storiesContainer: {
-    marginTop: '15@vs',
+    marginTop: '10@vs',
     borderBottomColor: colors.border_color,
-    borderBottomWidth: '2@s',
+    borderBottomWidth: '1@s',
   },
   storyHeadContainer: {
     flexDirection: 'row',
@@ -67,12 +68,12 @@ const styles = ScaledSheet.create({
     alignItems: 'center',
   },
   storyHeadingText: {
-    fontSize: '17@ms',
+    fontSize: '14@ms',
     fontWeight: '500',
   },
   storyListContainer: {
-    marginTop: '25@vs',
-    marginBottom: '20@vs',
+    marginTop: '15@vs',
+    marginBottom: '7@vs',
     marginLeft: '10@s'
   },
 });

@@ -46,7 +46,7 @@ const PostFooter = (props) => {
             <View style={styles.bottomContainer}>
                     <Text style={styles.likesTextStyle}>{likes} Likes</Text>
                     <View style={styles.likedbyContainer}>
-                        <Text>{liked_by} </Text>
+                        <Text style={{lineHeight: 12}}>{liked_by} </Text>
                         <Text style={styles.hashtagStyle}>#marinad</Text>
                     </View>
             </View>
@@ -61,7 +61,7 @@ const styles = ScaledSheet.create({
     topContainer:{
         flexDirection: 'row',
         justifyContent: 'space-between',
-        marginHorizontal: '30@s',
+        marginHorizontal: '15@s',
         marginTop: '15@vs',
         marginBottom: '10@vs'
     },
@@ -76,14 +76,16 @@ const styles = ScaledSheet.create({
     },
     likedbyContainer:{
         flexDirection: 'row',
-        marginHorizontal: '25@s',
+        marginHorizontal: '15@s',
         marginTop: '5@vs'
     },
     likesTextStyle:{
-        marginLeft: '25@s'
+        marginLeft: '15@s',
+        fontWeight: 'bold'
     },
     hashtagStyle:{
         color: colors.hashtag,
-        marginLeft: '10@s'
+        marginLeft: '5@s',
+        lineHeight: 12
     }
 })

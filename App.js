@@ -3,7 +3,7 @@ import React from 'react';
 import {View} from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { SafeAreaProvider , SafeAreaView } from 'react-native-safe-area-context';
-import MainStackNavigator from './routes';
+import {MainStackNavigator} from './routes';
 import { colors } from './src/styles/colors';
 
 const App = () => {

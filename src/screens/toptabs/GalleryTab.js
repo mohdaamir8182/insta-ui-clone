@@ -1,15 +1,13 @@
 import React,{useState} from 'react';
 import { Dimensions, TouchableOpacity, View, Image } from 'react-native';
-import GalleryHeader from './GalleryHeader';
-import { galleryPosts } from '../constants/Utils';
+import GalleryHeader from '../../components/GalleryHeader';
+import { galleryPosts } from '../../constants/Utils';
 import { scale } from 'react-native-size-matters';
 import { ScaledSheet } from 'react-native-size-matters';
-import {TopTabs} from '../../routes';
 
-const Gallery = () => {
+const GalleryTab = () => {
 
     const renderBody = () => {
-        if(selected == 1){
             return( 
                 galleryPosts.map((aPost , index) => {
                     return(
@@ -22,17 +20,18 @@ const Gallery = () => {
                     )
                 })  
             )
-        }
     }
 
     return (
         <View style={styles.container}>
-           <TopTabs />
+            <View style={styles.postContainer}>
+                {renderBody()}
+            </View>
         </View>
     )
 }
 
-export default Gallery
+export default GalleryTab
 
 const styles = ScaledSheet.create({
     container:{

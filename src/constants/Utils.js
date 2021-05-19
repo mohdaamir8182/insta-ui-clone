@@ -56,7 +56,7 @@ export const postList = [
         id: 1,
         userImage: require('../assets/avatar.png'),
         userName: "stokesy",
-        cover: require('../assets/img1.jpeg'),
+        cover: require('../assets/img3.jpeg'),
         likes: "2875",
         liked_by: "manindillaco"
     },
@@ -72,7 +72,7 @@ export const postList = [
         id: 3,
         userImage: require('../assets/avatar.png'),
         userName: "cook",
-        cover: require('../assets/img3.jpeg'),
+        cover: require('../assets/img1.jpeg'),
         likes: "2875",
         liked_by: "cottrell"
     },

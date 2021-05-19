@@ -11,7 +11,7 @@ const Header = () => {
             <View style={styles.leftIconContainer}>
                 <Icon
                     image={require('../assets/camera.png')}
-                    size={24}
+                    size={20}
                     color={colors.active_icon}
                 />
             </View>
@@ -19,7 +19,7 @@ const Header = () => {
             <View style={styles.midIconContainer}>
                 <Icon
                     image={require('../assets/logo.png')}
-                    size={150}
+                    size={120}
                     color={colors.active_icon}
                 />
             </View>
@@ -27,7 +27,7 @@ const Header = () => {
             <View style={styles.rightIconContainer}>
                 <Icon
                     image={require('../assets/send.png')}
-                    size={24}
+                    size={20}
                     color={colors.active_icon}
                 />
             </View>
@@ -40,7 +40,7 @@ export default Header
 
 const styles = ScaledSheet.create({
     container:{
-        height: '60@vs',
+        height: '50@vs',
         backgroundColor: colors.tab_bar_color,
         flexDirection: 'row',
         alignItems: 'center',

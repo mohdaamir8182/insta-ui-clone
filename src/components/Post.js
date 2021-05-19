@@ -21,7 +21,7 @@ const Post = (props) => {
                 <View style={styles.coverImageContainer}>
                     <Image 
                         source={cover}
-                        style={{height: verticalScale(320), width: undefined, borderRadius: scale(8)}}
+                        style={{height: verticalScale(330), width: undefined, borderRadius: scale(0)}}
                         resizeMode= "cover"
                     />
                 </View>
@@ -38,10 +38,10 @@ export default Post
 
 const styles = ScaledSheet.create({
     container:{
-        borderBottomWidth:'2@s',
+        borderBottomWidth:'1@s',
         borderBottomColor: colors.border_color,
     },
     coverImageContainer:{
-        marginHorizontal: '30@s'
+        marginHorizontal: '0@s'
     }
 })

@@ -12,30 +12,42 @@ import Bio from './Bio';
 const FeedHeader = () => {
     return (
         <View style={styles.container}>
-            <View style={styles.backArrowContainer}>
+            {/* <View style={styles.backArrowContainer}>
                 <Icon 
                     image={require('../assets/back.png')}
                     size={20}
                     color={colors.active_icon}
                 />
-            </View>
+            </View> */}
             <View style={styles.nameInfoContainer}>
-                <Text style={styles.nameTextStyle}>alisesmith</Text>
-                <Avatar 
-                    image={require('../assets/avatar.png')}
-                    size={30}
-                />
+                <Text style={styles.nameTextStyle}>mohd_aamir065</Text>
             </View>
             <View style={styles.postsInfoContainer}>
-                <Info title="posts" value="245" />
-                <View style={{marginHorizontal: 35}}>
-                    <Info title="followers" value="7850" />
+                
+                <Avatar image={require('../assets/avatar.png')} size={70} />
+                
+                <View style={styles.postinfoRightContainer} >
+                    <Info title="Posts" value="245" />
+                    <View style={{marginHorizontal: 45}}>
+                        <Info title="Followers" value="7850" />
+                    </View>
+                    <Info title="Following" value="725" />
                 </View>
-                <Info title="following" value="725" />
             </View>
+
+            <View style={styles.bioSection}>
+                <Bio 
+                    name="Alise Smith"
+                    verified={true}
+                    work="Fashion-Designer"
+                    location="London UK"
+                />
+            </View>
+
+
             <View style={styles.sendMessageContainer}>
                 <ButtonText title="Send Message" />
-                <View style={{marginLeft: 15}}>
+                {/* <View style={{marginLeft: 15}}>
                     <ButtonIcon 
                         iconFirst={require('../assets/user.png')}
                         iconSecond={require('../assets/tick.png')}
@@ -45,15 +57,7 @@ const FeedHeader = () => {
                     <ButtonIcon 
                         iconFirst={require('../assets/down.png')}
                     />
-                </View>
-            </View>
-            <View style={styles.bioSection}>
-                <Bio 
-                    name="Alise Smith"
-                    verified={true}
-                    work="Fashion-Designer"
-                    location="London UK"
-                />
+                </View> */}
             </View>
         </View>
     )
@@ -63,7 +67,7 @@ export default FeedHeader
 
 const styles = ScaledSheet.create({
     container:{
-        borderBottomWidth: '2@s',
+        borderBottomWidth: '0@s',
         borderBottomColor: colors.border_color
     },
     backArrowContainer:{
@@ -73,28 +77,37 @@ const styles = ScaledSheet.create({
         marginTop: '10@vs'
     },
     nameInfoContainer:{
+        marginTop: '15@vs',
         marginHorizontal: '20@s',
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'center'
     },
     nameTextStyle:{
-        fontSize: '25@ms',
+        fontSize: '20@ms',
         fontWeight: 'bold'
     },
     postsInfoContainer:{
         flexDirection: 'row',
-        marginTop: '20@vs',
-        marginHorizontal: '20@s'
+        alignItems: 'center',
+        justifyContent: 'space-between',
+        marginTop: '28@vs',
+        marginLeft: '20@s',
+        marginRight: '25@s'
+    },
+    
+    postinfoRightContainer: {
+        flexDirection: 'row',
     },
     sendMessageContainer:{ 
         flexDirection: 'row',
-        marginTop: '20@vs',
-        marginHorizontal: '20@s'
+        marginTop: '10@vs',
+        marginHorizontal: '10@s',
+        marginBottom: '20@vs',
     },
     bioSection:{
-        marginTop: '20@vs',
-        marginBottom: '20@vs',
+        marginTop: '10@vs',
+        marginBottom: '5@vs',
         marginHorizontal: '20@s',
         
     }
