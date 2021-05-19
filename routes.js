@@ -154,7 +154,7 @@ export const TopTabs = () => {
           inactiveTintColor: colors.black,
           style: {
             backgroundColor: colors.white,
-            paddingVertical: verticalScale(15)
+            paddingVertical: verticalScale(5)
           },
           indicatorStyle: {
             borderBottomColor: colors.black,
@@ -168,7 +168,7 @@ export const TopTabs = () => {
             tabBarIcon: ({color}) => (
               <Icon 
                 image={require('./src/assets/dots-menu.png')}
-                size={scale(18)}
+                size={scale(16)}
                 color={color}
               />
             ),
@@ -182,7 +182,7 @@ export const TopTabs = () => {
             tabBarIcon: ({ color }) => (
               <Icon 
                 image={require('./src/assets/list.png')}
-                size={scale(18)}
+                size={scale(16)}
                 color={color}
               />
             ),
@@ -195,7 +195,7 @@ export const TopTabs = () => {
             tabBarIcon: ({ color }) => (
               <Icon 
                 image={require('./src/assets/favorite.png')}
-                size={scale(18)}
+                size={scale(16)}
                 color={color}
               />
             ),
@@ -208,7 +208,7 @@ export const TopTabs = () => {
             tabBarIcon: ({ color }) => (
               <Icon 
                 image={require('./src/assets/user2.png')}
-                size={scale(18)}
+                size={scale(16)}
                 color={color}
               />
             ),

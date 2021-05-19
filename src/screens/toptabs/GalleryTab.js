@@ -1,6 +1,5 @@
-import React,{useState} from 'react';
+import React from 'react';
 import { Dimensions, TouchableOpacity, View, Image } from 'react-native';
-import GalleryHeader from '../../components/GalleryHeader';
 import { galleryPosts } from '../../constants/Utils';
 import { scale } from 'react-native-size-matters';
 import { ScaledSheet } from 'react-native-size-matters';

@@ -3,9 +3,7 @@ import { Text, View } from 'react-native';
 import { ScaledSheet } from 'react-native-size-matters';
 import { colors } from '../styles/colors';
 import Avatar from './Avatar';
-import ButtonIcon from './ButtonIcon';
 import ButtonText from './ButtonText';
-import Icon from './Icon';
 import Info from './Info';
 import Bio from './Bio';
 
@@ -47,17 +45,6 @@ const FeedHeader = () => {
 
             <View style={styles.sendMessageContainer}>
                 <ButtonText title="Send Message" />
-                {/* <View style={{marginLeft: 15}}>
-                    <ButtonIcon 
-                        iconFirst={require('../assets/user.png')}
-                        iconSecond={require('../assets/tick.png')}
-                    />
-                </View>
-                <View style={{marginLeft: 15}}>
-                    <ButtonIcon 
-                        iconFirst={require('../assets/down.png')}
-                    />
-                </View> */}
             </View>
         </View>
     )
